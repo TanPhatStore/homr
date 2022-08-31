@@ -1,0 +1,115 @@
+
+#listProduct {
+    transform: translateY(165.5px);
+    overflow: hidden;
+}
+
+#parentToChildren {
+    padding: 20px 20px 20px 40px;
+}
+
+#wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    & #btnOption {
+        position: absolute;
+        color: white;
+        top: 130px;
+        font-size: 20px;
+        right: -3px;
+        background-color: black;
+        padding: 7px;
+        z-index: 1;
+        display: none;
+    }
+    &__TOC {
+        & #btnClose__TOC {
+            position: absolute;
+            right: 0;
+            font-size: 25px;
+            display: none;
+        }
+        & .wrapper__TOC_item {
+            margin-bottom: 40px;
+            & h5 {
+                font-weight: bold;
+                font-size: 18px;
+            }
+            & .categoryArea {
+                margin-top: 20px;
+                border: 1px solid rgb(230, 226, 226);
+                padding-top: 20px;
+                border-radius: 5px;
+                overflow-y: scroll;
+
+                & .categoryProduct {
+                    cursor: pointer;
+            
+                    & p {
+                        line-height: 20px;
+                        height: 30px;
+                        font-size: 18px;
+                        font-weight: 600;
+                        margin-left: 20px;
+                    }
+
+                }
+
+                & .price {
+                    font-weight: 500;
+                    padding-left: 10px;
+                } 
+            }
+
+            & .cateSizes {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+
+                & p {
+                    font-weight: 500;
+                }
+            }
+        }
+        
+    }
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+    height: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgb(190, 185, 185);
+}
+
+@media only screen and (max-width: 63.9375em) { 
+    #wrapper {
+        & #btnOption {
+            display: block;
+            transition: 0.7s;
+        }
+
+        &__TOC {
+            position: relative;
+            background-color: rgb(241, 236, 236);
+            z-index: 1;
+            overflow: scroll;
+            height: 600px;
+            transition: 0.5s;
+            padding-top: 20px;
+
+            & #btnClose__TOC {
+                display: block;
+            }
+        }
+        &__mainContent {
+            transition: 0.5s;
+
+            & .product__name {
+                margin-top: 20px;
+                height: auto;
+            }
+        }
+    }
+}   

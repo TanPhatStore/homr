@@ -1,5 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;1,300;1,400&display=swap');
+
 .App {
   text-align: center;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.container-fluid {
+  padding: 0;
 }
 
 .App-logo {
